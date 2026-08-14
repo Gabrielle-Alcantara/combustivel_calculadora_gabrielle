@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="combustivel_calculadora_gabrielle.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="etanol_gasolina.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Gasolina ou Etanol. Qual combustível compensa mais?"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+
+            <Entry
+                x:Name="entryetanol"
+                Placeholder="Preço do litro de etanol"
+                Keyboard="Numeric" 
+                WidthRequest="300" />
+
+            <Entry
+                x:Name="entrygasolina"
+                Placeholder="Preço do litro de gasolina"
+                Keyboard="Numeric" 
+                WidthRequest="300" />
+
+            <Entry
+                x:Name="entrykminicial"
+                Placeholder="Quilometragem inicial"
+                Keyboard="Numeric"
+                WidthRequest="300" />
+
+            <Entry
+                x:Name="entrykmfinal"
+                Placeholder="Quilometragem final"
+                Keyboard="Numeric"
+                WidthRequest="300" />
+
+            <Entry
+                x:Name="entrylitrosabastecidos"
+                Placeholder="Quantidade de litros abastecidos"
+                Keyboard="Numeric" 
+                WidthRequest="300" />
+
+            <Button
+                x:Name="CalcBtn"
+                Text="Calcular"
+                Clicked="OnCounterCalc"
+                HorizontalOptions="Center"
+                BackgroundColor="Orange"/>
+           
+            <Label x:Name="Resultlabel" 
+                   Text="Compensa abastecer com..."
+                   FontSize="20"
+                   HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
