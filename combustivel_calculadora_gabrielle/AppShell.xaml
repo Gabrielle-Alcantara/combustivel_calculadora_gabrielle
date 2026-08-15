@@ -8,7 +8,7 @@
     Title="combustivel_calculadora_gabrielle">
 
     <ShellContent
-        Title="Home"
+        Title="Calculadora de combustível"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
