@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="combustivel_calculadora_gabrielle.MainPage">
+             x:Class="combustivel_calculadora_gabrielle.MainPage"
+             BackgroundColor="AntiqueWhite">
 
     <ScrollView>
         <VerticalStackLayout
@@ -24,31 +25,36 @@
                 x:Name="entryetanol"
                 Placeholder="Preço do litro de etanol"
                 Keyboard="Numeric" 
-                WidthRequest="300" />
+                PlaceholderColor="Orange"
+                WidthRequest="500" />
 
             <Entry
                 x:Name="entrygasolina"
                 Placeholder="Preço do litro de gasolina"
+                PlaceholderColor="Orange"
                 Keyboard="Numeric" 
-                WidthRequest="300" />
+                WidthRequest="500" />
 
             <Entry
                 x:Name="entrykminicial"
                 Placeholder="Quilometragem inicial"
+                PlaceholderColor="Orange"
                 Keyboard="Numeric"
                 WidthRequest="300" />
 
             <Entry
                 x:Name="entrykmfinal"
                 Placeholder="Quilometragem final"
+               PlaceholderColor="Orange"
                 Keyboard="Numeric"
-                WidthRequest="300" />
+                WidthRequest="500" />
 
             <Entry
                 x:Name="entrylitrosabastecidos"
                 Placeholder="Quantidade de litros abastecidos"
+                PlaceholderColor="Orange"
                 Keyboard="Numeric" 
-                WidthRequest="300" />
+                WidthRequest="500" />
 
             <Button
                 x:Name="CalcBtn"
