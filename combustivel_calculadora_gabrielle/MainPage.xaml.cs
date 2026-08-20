@@ -1,4 +1,6 @@
-﻿namespace combustivel_calculadora_gabrielle
+﻿using Microsoft.Maui.Graphics.Text;
+
+namespace combustivel_calculadora_gabrielle
 {
     public partial class MainPage : ContentPage
     {
@@ -21,28 +23,30 @@
                 return;
             }
 
-            double distancia = 0;
-            double consumo = 0;
-            double kmetanol = 0;
-            double kmgasolina = 0;
-            double consumogasolina = 0;
-            double consumoetanol = 0;
-            double indice = 0;
+            
+            
+            
 
             //Consumo em km/L 
-            distancia = kmfinal - kminicial;
-            consumo = distancia / litrosabastecidos;
+            double distancia = kmfinal - kminicial;
+            double consumo = distancia / litrosabastecidos;
+
+            if (kminicial > kmfinal)
+            {
+                DisplayAlert("Erro", "A quilometragem inicial deve ser menor que a final", "Ok");
+                return;
+            }
 
             //Km rodado com gasolina
-            double custogasolina = precogasolina / consumogasolina;
+            double custogasolina = precogasolina / consumo;
 
             //Km rodado com etanol
-            double custoetanol = precoetanol / consumoetanol;
+            double custoetanol = precoetanol / consumo;
 
 
 
             //Regra dos 70%
-            indice = precoetanol / precogasolina;
+            double indice = precoetanol / precogasolina;
             string indice70;
             if (indice <= 0.70)
             {
@@ -56,13 +60,14 @@
             //qual combustivel compensa mais
             if (custoetanol < custogasolina)
             {
-                Resultlabel.Text = $"Consumo médio: {consumo} km/L \n Distância percorrida: {distancia} Km \nCusto por Km rodado abastecendo com etanol: R$ {custoetanol} " +
-                $"\nCusto por Km rodado abastecendo com gasolina: R$ {custogasolina} \nO combuntível mais vantajoso é o Etanol \n Regra dos 70%: {indice} \n {indice70}";
+                
+                Resultlabel.Text = $"Consumo médio: {consumo} km/L \n \n Distância percorrida: {distancia} Km \n \nCusto por Km rodado abastecendo com etanol: R$ {custoetanol} " +
+                $"\n \nCusto por Km rodado abastecendo com gasolina: R$ {custogasolina}\n \nO combustível mais vantajoso é o Etanol \n \n Regra dos 70%: {indice70}";
             }
             else
             {
-                Resultlabel.Text = $"Consumo médio em km/L: {consumo}\n Distância percorrida: {distancia} Km \nCusto por Km rodado por gasoolina: {kmgasolina} " +
-                $"\nCusto por Km rodado por álcool: {kmetanol} \nO combuntível mais vantajoso é a gasolina \n Regra dos 70%: {indice} \n {indice70}";
+                Resultlabel.Text = $"Consumo médio em km/L: {consumo} \n \n Distância percorrida: {distancia} Km \n \nCusto por Km rodado por gasolina: {custogasolina} " +
+                $" \n \nCusto por Km rodado por álcool: {custoetanol} \n \nO combustível mais vantajoso é a gasolina \n \n Regra dos 70%: {indice70}";
             }
 
         

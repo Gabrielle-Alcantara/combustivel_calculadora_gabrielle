@@ -15,6 +15,7 @@
 
             <Label
                 Text="Gasolina ou Etanol. Qual combustível compensa mais?"
+                TextColor="Black"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 FontAttributes="Bold"
@@ -26,45 +27,47 @@
                 Placeholder="Preço do litro de etanol"
                 Keyboard="Numeric" 
                 PlaceholderColor="Orange"
-                WidthRequest="500" />
+                WidthRequest="280" />
 
             <Entry
                 x:Name="entrygasolina"
                 Placeholder="Preço do litro de gasolina"
                 PlaceholderColor="Orange"
                 Keyboard="Numeric" 
-                WidthRequest="500" />
+                WidthRequest="280" />
 
             <Entry
                 x:Name="entrykminicial"
                 Placeholder="Quilometragem inicial"
                 PlaceholderColor="Orange"
                 Keyboard="Numeric"
-                WidthRequest="300" />
+                WidthRequest="280" />
 
             <Entry
                 x:Name="entrykmfinal"
                 Placeholder="Quilometragem final"
                PlaceholderColor="Orange"
                 Keyboard="Numeric"
-                WidthRequest="500" />
+                WidthRequest="280" />
 
             <Entry
                 x:Name="entrylitrosabastecidos"
                 Placeholder="Quantidade de litros abastecidos"
                 PlaceholderColor="Orange"
                 Keyboard="Numeric" 
-                WidthRequest="500" />
+                WidthRequest="280" />
 
             <Button
                 x:Name="CalcBtn"
                 Text="Calcular"
+                TextColor="Black"
                 Clicked="OnCounterCalc"
                 HorizontalOptions="Center"
                 BackgroundColor="Orange"/>
            
             <Label x:Name="Resultlabel" 
                    Text="Compensa abastecer com..."
+                   TextColor="Black"
                    FontSize="20"
                    HorizontalOptions="Center" />
         </VerticalStackLayout>
