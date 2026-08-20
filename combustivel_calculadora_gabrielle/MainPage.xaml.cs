@@ -12,6 +12,7 @@ namespace combustivel_calculadora_gabrielle
 
         private void OnCounterCalc(object sender, EventArgs e)
         {
+
             if (!double.TryParse(entrykminicial.Text, out double kminicial) ||
         !double.TryParse(entrykmfinal.Text, out double kmfinal) ||
         !double.TryParse(entrylitrosabastecidos.Text, out double litrosabastecidos) ||
